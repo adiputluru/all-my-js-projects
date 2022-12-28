@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+ 
+ <style>
+     .bulb {
+    background-color: #4b5069;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bulbcard{
+ border-radius:20px;
+}
+ </style>
+ </head>
+  <body class='bg-info'>
+    <h2 class='text-center'>Traffic light</h2>
+    <div class='d-flex flex-row justify-content-center text-center'>
+    <div class='d-flex flex-column'>
+        <div class='mt-5'>
+    <button onclick='stop()' id='stopb' class='btn btn-light'>stop</button>
+    </div>
+    <div class='mt-5'>
+    <button onclick='ready()' id='readyb' class='btn btn-light'>Ready</button>
+    </div>
+    <div class='mt-5'>
+    <button onclick='go()' id='gob' class='btn btn-light'>Go</button>
+    </div>
+    </div>
+    <div class='bg-dark ml-5 mt-3 bulbcard'>
+        <div id='stop' class='bulb'></div>
+        <div id='ready' class='bulb'></div>
+        <div id='go' class='bulb'></div>
+    </div>
+
+    </div>
+<a href="colorpicker">go to colorpicker</a>
+  </body>
+  <script>
+      function stop(){
+    document.getElementById('stop').style.backgroundColor='red';
+    document.getElementById('stopb').style.backgroundColor='red'
+    document.getElementById('ready').style.backgroundColor='#4b5069';
+    document.getElementById('readyb').style.backgroundColor='white';
+    document.getElementById('go').style.backgroundColor='#4b5069';
+    document.getElementById('gob').style.backgroundColor='white';
+}
+function ready(){
+    document.getElementById('ready').style.backgroundColor='yellow';
+    document.getElementById('readyb').style.backgroundColor='yellow';
+    document.getElementById('stop').style.backgroundColor='#4b5069';
+    document.getElementById('stopb').style.backgroundColor='white';
+    document.getElementById('go').style.backgroundColor='#4b5069';
+    document.getElementById('gob').style.backgroundColor='white';
+}
+function go(){
+    document.getElementById('go').style.backgroundColor='green';
+    document.getElementById('gob').style.backgroundColor='green';
+    document.getElementById('ready').style.backgroundColor='#4b5069';
+    document.getElementById('readyb').style.backgroundColor='white';
+    document.getElementById('stop').style.backgroundColor='#4b5069';
+    document.getElementById('stopb').style.backgroundColor='white';
+}
+  </script>
+</html>

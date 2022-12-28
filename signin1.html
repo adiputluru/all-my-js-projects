@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <P>your name</P>
+   <input type="text" id='input'>
+   <p>password</p>
+   <input type='password'>
+   <div>
+   <button id='signinid' onclick="signin()">sign in</button>
+   </div>
+   <p id='msgid'></p>
+  
+<script>
+let inputval=document.getElementById("input");
+let message=document.getElementById("msgid");
+
+function signin(){
+    let receivedval=inputval.value;
+    console.log(receivedval)
+    let msg="hi "+receivedval+" your sign in progress...";
+    
+    message.textContent=msg;
+}
+</script>
+</body>
+</html>
